@@ -1,9 +1,12 @@
-# This workflow will run tests on PRs that start with 'feat/' or 'fix/'.
+# This workflow will run tests on PRs
+
 name: Classic Phone Pad PR
+
 on:
   pull_request:
     branches:
-      - main
+      - master
+
 jobs:
   build_test:
     runs-on: ubuntu-latest
