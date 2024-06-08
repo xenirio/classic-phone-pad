@@ -1,4 +1,4 @@
-# This workflow will run tests on PRs that start with 'feat/' or 'fix/'.
+# This workflow will run tests on PRs that start with 'feat/' or 'fix/'
 name: Classic Phone Pad PR
 on:
   pull_request:
