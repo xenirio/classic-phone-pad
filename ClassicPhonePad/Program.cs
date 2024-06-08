@@ -6,6 +6,7 @@ class Program
     private readonly ClassicPhone _phone;
     public Program()
     {
+        // Create a keypad with buttons
         var keypad = new Keypad();
         keypad.AddButton('1', new Button(['&', '\'', '(']));
         keypad.AddButton('2', new Button(['A', 'B', 'C']));
@@ -20,16 +21,19 @@ class Program
         keypad.AddButton('*', new Button(['*']));
         keypad.AddButton('#', new Button(['#']));
 
+        // Create a classic phone with the keypad and processor
         var processor = new Processor();
         _phone = new ClassicPhone(keypad, processor);
     }
 
+    // Method to call the ClassicPhone's Press method
     public static string OldPhonePad(string input)
     {
         var program = new Program();
         return program._phone.Press(input);
     }
 
+    // Method to display the output and any errors
     static void execute(string input)
     {
         try
@@ -63,11 +67,13 @@ class Program
         ConsoleKeyInfo keyInfo;
         char keyChar;
 
+        // Continuously prompt user for input until Ctrl+C is pressed
         Console.WriteLine("\nPress Ctrl+C to exit.");
         while (true)
         {
-            var token = new StringBuilder();
+            // Asking user for input sequence and confirming with #
             Console.Write("\nEnter number sequence, confirm with \"#\": ");
+            var token = new StringBuilder();
             while (true)
             {
                 keyInfo = Console.ReadKey(intercept: true);

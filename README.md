@@ -1,12 +1,35 @@
 # Classic Phone Pad
 
-This is a simple project that simulates a classic phone pad. It was built using C# with Console Application.
+This is a simple project that simulates a classic phone pad with the numbers from 0 to 9 and the letters that are associated with each number, backspace key, and a send button.
+Each button is numbered, and pressing a button repeatedly cycles through the letters assigned to it, allowing each button to represent multiple letters.
+
+You can input sequences of numbers with the operators `*` and `#` and the program will output the corresponding letters.
 
 ## Prerequisites
 
-- .NET Core 8.0 or higher installed on your machine. You can download it [here](https://dotnet.microsoft.com/download).
+- .NET Core 8.0 or higher installed on your machine.  
+  Download .NET Core 8.0 from [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download).
 
-- Visual Studio Code or Visual Studio 2022 installed on your machine. You can download Visual Studio Code [here](https://code.visualstudio.com/download) and Visual Studio 2022 [here](https://visualstudio.microsoft.com/).
+- Visual Studio Code or Visual Studio 2022 installed on your machine.  
+  Download Visual Studio Code from [https://code.visualstudio.com/download](https://code.visualstudio.com/download)  
+  Download Visual Studio 2022 from [https://visualstudio.microsoft.com](https://visualstudio.microsoft.com).
+
+## Project Structure
+
+- ### ClassicPhonePad
+  A console application that uses the core library to simulate the classic phone pad.
+
+- ### ClassicPhonePad.Core 
+  A class library that contains the classes and interfaces that define the core logic of the application.
+
+- ### ClassicPhonePad.Core.Tests
+  A class library that contains the unit tests for the core library.
+
+```mermaid
+graph TD;
+  APP["ClassicPhonePad"] --"reference"--> CORE["ClassicPhonePad.Core"]
+  TESTS["ClassicPhonePad.Core.Tests"] --"reference"--> CORE
+```
 
 ## How to run
 

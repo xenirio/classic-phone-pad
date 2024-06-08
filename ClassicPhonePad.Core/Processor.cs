@@ -15,16 +15,21 @@ public class Processor : IProcessor
         Stack<char> ops = new Stack<char>();
         List<char> decoded = new List<char>();
 
+        // Decode tokens by popping the stack and checking for operators
         while (token.Count > 0)
         {
             char operand = token.Pop();
             if (_operators.Contains(operand))
             {
+                // Push the operator to the stack
                 ops.Push(operand);
                 continue;
             }
+
             if(ops.Count > 0)
             {
+                // Operate on the last operator, 
+                // if it is a * operator then skip the current symbol
                 char op = ops.Pop();
                 if (op == '*')
                     continue;
