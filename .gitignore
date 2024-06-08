@@ -1,0 +1,60 @@
+# Ignore Visual Studio temporary files, build results, and
+# User-specific files
+.vscode/
+.vs/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Ignore build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]ssets[Bb]undles/
+[Aa]ssets[Pp]ackage[Tt]emporary[Tt]ransfer/
+*.[Oo]bj/
+*.app/
+*.pdb
+*.exe
+*.dll
+*.log
+*.sql
+*.sqlite
+
+# Ignore any files in the publish directory
+[Pp]ublish/
+publish/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Ignore all sub folders of bin
+bin/
+obj/
+*.dll
+*.log
+
+# Rider project files
+.idea/
+.idea_modules/
+.idea_docker/
+.idea_run/
+.idea/codeStyle/
+.idea/inspectionProfiles/
+.idea/shelf/
+.idea/tasks/
+.idea/templates/
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/*.xml
+
+# Mono Aut
