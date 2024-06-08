@@ -17,7 +17,6 @@ namespace ClassicPhonePad.Core.Tests
             _phone = new ClassicPhone(_keypad.Object, _processor.Object);
         }
 
-
         [TestMethod]
         public void Press_InputMustEnd_WithHash()
         {
