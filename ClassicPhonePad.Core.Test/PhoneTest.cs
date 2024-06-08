@@ -19,7 +19,7 @@ namespace ClassicPhonePad.Core.Tests
 
 
         [TestMethod]
-        public void Press_Input_Must_End_With_Hash()
+        public void Press_InputMustEnd_WithHash()
         {
             // Arrange
             var input = "33";
@@ -29,7 +29,7 @@ namespace ClassicPhonePad.Core.Tests
         }
 
         [TestMethod]
-        public void Encode_Must_Be_Digits_Or_Star_Or_Hash()
+        public void Encode_MustBeDigitsOrStarOrHash()
         {
             // Arrange
             var input = "ABC*DEF**GH#";
@@ -39,7 +39,7 @@ namespace ClassicPhonePad.Core.Tests
         }
 
         [TestMethod]
-        public void Press_Should_Return_Decoded_Input()
+        public void Press_ShouldReturnDecodedInput()
         {
             // Arrange
             _keypad.Setup(k => k.Encode(It.IsAny<string>())).Returns([new KeyValuePair<char, int>('2', 1)]);
